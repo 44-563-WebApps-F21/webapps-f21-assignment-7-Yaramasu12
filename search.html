@@ -85,6 +85,19 @@
                   let distance = Math.max(Math.abs(horizontal2-horizontal1),Math.abs(vertical2-vertical1));
                   return distance;
               }
+              // Bonus code
+              function resetTriesAndLocation() {
+            triesCount = 0;
+            animalLocation = Math.round(Math.random() * (23));//(max-min)-min i.e. (23-0)+0
+            document.getElementById("tries").innerHTML = "Number of tries is zero";
+            distanceOfAnimal = "unknown"
+            document.getElementById("distance").innerHTML = "Distance is " + distanceOfAnimal;
+            for (var i = 0; i < 24; i++) {
+
+                document.getElementById(ids[i]).src = "flower.jpg";
+            }
+
+        }
         </script>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -140,6 +153,6 @@
                   <div class="col-sm-2"><img src="flower.jpg" alt="flower" width="100px"; height="100px"; id="image23" onclick="check(23)"></div>
               </div>
           </div>
-    
+          <button type="button" class="btn btn-primary" onclick="resetTriesAndLocation()">Reset All images</button>
 </style>
 </head>
